@@ -1,6 +1,6 @@
-# GLPI
+# STACK DE MONITORAMENTO
 
-Provisionar infraestrutura na AWS para suportar aplicação do GLPI e Grafana, ambas conteinerizadas e versionadas.
+Toda a infraestrutura será provisionada na AWS para suportar aplicação do Zabbix e Grafana conteinerizadas.
 
 ### **Escopo**:
 
