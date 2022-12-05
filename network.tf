@@ -1,7 +1,7 @@
-module "modulo-tcloud-vpc" {
+module "modulo_tcloud_vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "tcloud-vpc"
+  name = "tcloud_vpc"
   cidr = "172.16.0.0/16"
 
   azs = ["us-east-1a"]
@@ -15,6 +15,6 @@ module "modulo-tcloud-vpc" {
   tags = {
     Terraform   = "true"
     Environment = "producao"
-    Name        = "tcloud-vpc"
+    Name        = "tcloud_vpc"
   }
 }
