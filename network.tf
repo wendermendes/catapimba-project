@@ -1,11 +1,11 @@
-module "vpc" {
+module "modulo-tcloud-vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "tcloud_vpc"
+  name = "tcloud-vpc"
   cidr = "172.16.0.0/16"
 
   azs = ["us-east-1a"]
-  #  private_subnets = ["172.16.1.0/24"]
+  private_subnets = ["172.16.1.0/24"]
   public_subnets = ["172.16.2.0/24"]
 
   enable_nat_gateway     = false
@@ -14,7 +14,7 @@ module "vpc" {
 
   tags = {
     Terraform   = "true"
-    Environment = "prd"
+    Environment = "producao"
     Name        = "tcloud-vpc"
   }
 }
