@@ -45,6 +45,6 @@ resource "aws_eip" "tcloud_srv_ip" {
 }
 
 output "bootcamp_aws_elastic_ip" {
-  value       = "http://${aws_eip.bootcamp-ip.public_ip}:80"
+  value       = "http://{aws_eip.bootcamp-ip.public_ip}:80"
   description = "Public IP and Port address of the instance"
 }
