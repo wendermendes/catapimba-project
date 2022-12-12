@@ -17,6 +17,4 @@ sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 #CRIAÇÃO DOS CONTAINERS QUE VÃO RODAR AS APLICAÇÕES
-docker run --name tcloud_zbx_db -e MARIADB_ROOT_PASSWORD=root_password -e MARIADB_DATABASE=zabbix_db -e MARIADB_USER=zabbix_usr -e MARIADB_PASSWORD=zabbox_pwd --volume /var/lib/mysql:/var/lib/mysql -d mariadb:10.7
-docker run --name tcloud_zbx_fe --link mariadb:mariadb -p 80:80 -d truecharts/zabbix-server
-docker run --name tcloud_gfn -p 3000:3000 -d grafana/grafana
+docker run -d -p 80:8080 --name jenkins-pod jenkins-server-image
